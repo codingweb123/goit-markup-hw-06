@@ -981,7 +981,7 @@ svg.icon {
 @media (max-width: 1120px)
 {
 	.header {
-		padding: 16px 24px 5px 24px;
+		padding: 16px 24px 8px 24px;
 	}
 	.header .header-list {
 		width: 100%;
@@ -996,6 +996,12 @@ svg.icon {
 	.header .header-contacts ul {
 		flex-direction: column;
 		gap: 12px;
+	}
+	.header .header-contacts ul li a {
+		font-weight: 400;
+		font-size: 12px;
+		line-height: 1.17;
+		letter-spacing: 0.04em;
 	}
 }
 @media (max-width: 768px)
