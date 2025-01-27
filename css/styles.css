@@ -82,7 +82,6 @@ body {
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	max-width: 1440px;
 	background-image: linear-gradient(
 			rgba(46, 47, 66, 0.7),
 			rgba(46, 47, 66, 0.7)
@@ -104,6 +103,7 @@ body {
 }
 .solutions .solutions-title {
 	margin-top: 69px;
+	min-width: 496px;
 	max-width: 496px;
 }
 .btn {
@@ -161,6 +161,10 @@ body {
 	border-radius: 0px 0px 4px 4px;
 	box-shadow: 0px 1px 6px rgba(46, 47, 66, 8%),
 		0px 1px 1px rgba(46, 47, 66, 16%), 0px 2px 1px rgba(46, 47, 66, 8%);
+}
+.team ul .team-card img,
+.portfolio ul li .image {
+	width: 100%;
 }
 .team ul li .icons {
 	display: flex;
@@ -385,6 +389,7 @@ h3 {
 }
 .footer .container {
 	display: flex;
+	justify-content: center;
 	align-items: baseline;
 }
 .footer .content {
@@ -482,6 +487,7 @@ h3 {
 	fill: var(--light);
 }
 .footer .footer-text {
+	min-width: 264px;
 	max-width: 264px;
 	color: var(--light);
 }
@@ -699,7 +705,8 @@ svg.icon {
 	clip: rect(0 0 0 0);
 	overflow: hidden;
 }
-.modal-overlay .close {
+.modal-overlay .close,
+.menu-overlay .close {
 	position: absolute;
 	top: 24px;
 	right: 24px;
@@ -762,4 +769,299 @@ svg.icon {
 .modal-overlay .modal form {
 	display: flex;
     flex-direction: column;
+}
+.menu_open {
+	display: none;
+}
+.menu-overlay {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 999;
+	opacity: 0;
+	pointer-events: none;
+	transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+	background-color: var(--white);
+}
+.menu-overlay.is-open {
+	opacity: 1;
+	pointer-events: auto;
+}
+.menu-overlay .modal {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	padding: 16px 24px;
+	transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+	background-color: var(--white);
+}
+.menu-overlay .close {
+	background-color: transparent;
+}
+.menu-overlay .menu {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	width: 100%;
+	height: 100%;
+	padding: 72px 16px;
+	gap: 48px;
+}
+.menu-overlay .menu .icons {
+	display: flex;
+	margin-top: 48px;
+	margin-bottom: 48px;
+}
+.menu-overlay .menu .menu-links {
+	display: flex;
+	flex-direction: column;
+	gap: 40px;
+}
+.menu-overlay .menu .menu-links .menu-link {
+	font-weight: 700;
+	font-size: 36px;
+	line-height: 1.11;
+	letter-spacing: 0.02em;
+	color: var(--dark);
+}
+.menu-overlay .menu .menu-links .menu-link.active {
+	color: var(--pressed);
+}
+.menu-overlay .menu .header-contacts ul {
+	display: flex;
+	flex-direction: column;
+	gap: 24px;
+}
+.menu-overlay .menu .header-contacts ul li a {
+	font-weight: 500;
+	font-size: 20px;
+	line-height: 1.2;
+	letter-spacing: 0.02em;
+}
+.menu-overlay .menu .header-contacts ul li:first-child a {
+	color: var(--primary);
+}
+.menu-overlay .menu .menu-bottom {
+	position: absolute;
+	bottom: 0;
+}
+.icons {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 40px;
+}
+.icons li {
+	width: 40px;
+	height: 40px;
+}
+.icons a.icon {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	height: 100%;
+	border-radius: 50%;
+	transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+	background-color: var(--primary);
+}
+.icons a.icon svg.icon {
+	fill: var(--light);
+}
+.icons a.icon:hover,
+.icons a.icon:focus {
+	background-color: var(--pressed);
+}
+@media (min-resolution: 192dpi)
+{
+	.solutions {
+		background-image: linear-gradient(
+			rgba(46, 47, 66, 0.7),
+			rgba(46, 47, 66, 0.7)
+		),
+		url("../images/hero@2x.jpg");
+	}
+}
+@media (max-width: 1350px)
+{
+	.container {width: 100%;}
+	.skills ul {
+		gap: 36px;
+		justify-content: center;
+	}
+	.skills ul li {
+		flex-basis: calc( (100% - 72px) / 3);
+	}
+	.team ul {
+		gap: 36px;
+	}
+	.team ul .team-card {
+		flex-basis: calc( (100% - 72px) / 3);
+	}
+	.portfolio ul {
+		gap: 48px 36px;
+		justify-content: center;
+	}
+}
+@media (max-width: 1158px)
+{
+	.portfolio, .team {
+		padding: 72px 16px;
+	}
+	.skills {
+		padding: 96px 16px;
+	}
+	.portfolio ul {
+		display: grid;
+		grid-template-columns: repeat(2, 356px);
+	}
+	.team ul {
+		display: grid;
+		grid-template-columns: repeat(2, 264px);
+	}
+	.team ul .team-card .text {
+		padding: 32px 16px;
+	}
+	.team ul li .icons {
+		flex-wrap: nowrap;
+	}
+	.footer {
+		padding: 96px 108px;
+	}
+	.footer .container {
+		flex-wrap: wrap;
+		justify-content: space-between;
+		gap: 72px 24px;
+	}
+	.footer .content {
+		margin-right: unset;
+	}
+	.footer .subscribe {
+		margin-left: unset;
+	}
+}
+@media (max-width: 1120px)
+{
+	.header {
+		padding: 16px 24px;
+	}
+	.header .header-list {
+		width: 100%;
+		justify-content: space-between;
+		align-items: center;
+		gap: unset;
+	}
+	.header .header-list ul {
+		justify-content: center;
+		flex-grow: 1;
+	}
+	.header .header-contacts ul {
+		flex-direction: column;
+		gap: 12px;
+	}
+}
+@media (max-width: 900px)
+{
+	.skills ul {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+	}
+}
+@media (max-width: 768px)
+{
+	.skills ul {
+		grid-template-columns: repeat(2, 356px);
+	}
+	.skills ul li div.icon {
+		display: none;
+	}
+	.skills ul li {
+		max-width: unset;
+	}
+	.skills ul li .section-name {
+		font-weight: 700;
+		font-size: 36px;
+		line-height: 1.11;
+		letter-spacing: 0.02em;
+		color: var(--dark);
+	}
+	.skills ul li .section-text {
+		font-weight: 500;
+		font-size: 16px;
+		line-height: 1.5;
+		letter-spacing: 0.02em;
+		color: var(--text);
+	}
+}
+@media (max-width: 755px)
+{
+	.skills ul {
+		display: flex;
+		flex-direction: column;
+		gap: 72px 8px;
+	}
+	.skills ul li {
+		flex-basis: 100%;
+	}
+	.skills ul li .section-name {
+		text-align: center;
+	}
+	.portfolio ul {
+		display: flex;
+	}
+	.footer .subscribe form {
+		flex-direction: column;
+		gap: 16px;
+	}
+	.footer .container {
+		justify-content: center;
+		align-items: center;
+		gap: 72px;
+	}
+	.footer {
+		padding: 96px 16px;
+	}
+	.footer .container {
+		gap: 24px;
+	}
+}
+@media (max-width: 585px)
+{
+	.solutions .solutions-title {
+		min-width: unset;
+		max-width: unset;
+	}
+	.solutions .btn {
+		min-width: 169px;
+		max-width: 169px;
+		min-height: 56px;
+		max-height: 56px;
+		padding: 0;
+	}
+	.footer .container {
+		gap: 72px;
+	}
+	.team ul .team-card {
+		flex-basis: 100%;
+	}
+	.team ul {
+		display: flex;
+	}
+	.footer .container {
+		flex-direction: column;
+	}
+	.footer .content .logo,
+	.footer .socials-text,
+	.footer .subscribe-text {
+		text-align: center;
+	}
+	.header .header-list ul,
+	.header .header-contacts {
+		display: none;
+	}
+	.menu_open {
+		display: flex;
+	}
 }
