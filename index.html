@@ -55,7 +55,6 @@
 						xmlns="http://www.w3.org/2000/svg"
 						viewBox="0 0 448 512"
 					>
-						<!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.-->
 						<path
 							d="M16 132h416c8.8 0 16-7.2 16-16V76c0-8.8-7.2-16-16-16H16C7.2 60 0 67.2 0 76v40c0 8.8 7.2 16 16 16zm0 160h416c8.8 0 16-7.2 16-16v-40c0-8.8-7.2-16-16-16H16c-8.8 0-16 7.2-16 16v40c0 8.8 7.2 16 16 16zm0 160h416c8.8 0 16-7.2 16-16v-40c0-8.8-7.2-16-16-16H16c-8.8 0-16 7.2-16 16v40c0 8.8 7.2 16 16 16z"
 						/>
@@ -131,11 +130,19 @@
 					<ul>
 						<li class="team-card">
 							<picture>
-								<img
+								<source
 									srcset="./images/team1.jpg 1x, ./images/team1@2x.jpg 2x"
-									src="./images/team1.jpg"
-									alt="Mark Guerrero Image"
+									media="(min-width: 1158px)"
 								/>
+								<source
+									srcset="./images/team1.jpg 1x, ./images/team1@2x.jpg 2x"
+									media="(min-width: 768px)"
+								/>
+								<source
+									srcset="./images/team1.jpg 1x, ./images/team1@2x.jpg 2x"
+									media="(max-width: 767px)"
+								/>
+								<img src="./images/team1.jpg" alt="Mark Guerrero Image" />
 							</picture>
 							<div class="text">
 								<h3 class="section-name">Mark Guerrero</h3>
@@ -174,13 +181,19 @@
 						</li>
 						<li class="team-card">
 							<picture>
-								<img
-									loading="lazy"
+								<source
 									srcset="./images/team2.jpg 1x, ./images/team2@2x.jpg 2x"
-									src="./images/team2.jpg"
-									width="264"
-									alt="Tom Ford Image"
+									media="(min-width: 1158px)"
 								/>
+								<source
+									srcset="./images/team2.jpg 1x, ./images/team2@2x.jpg 2x"
+									media="(min-width: 768px)"
+								/>
+								<source
+									srcset="./images/team2.jpg 1x, ./images/team2@2x.jpg 2x"
+									media="(max-width: 767px)"
+								/>
+								<img src="./images/team2.jpg" alt="Tom Ford Image" />
 							</picture>
 							<div class="text">
 								<h3 class="section-name">Tom Ford</h3>
@@ -219,13 +232,19 @@
 						</li>
 						<li class="team-card">
 							<picture>
-								<img
-									loading="lazy"
+								<source
 									srcset="./images/team3.jpg 1x, ./images/team3@2x.jpg 2x"
-									src="./images/team3.jpg"
-									width="264"
-									alt="Camila Garcia Image"
+									media="(min-width: 1158px)"
 								/>
+								<source
+									srcset="./images/team3.jpg 1x, ./images/team3@2x.jpg 2x"
+									media="(min-width: 768px)"
+								/>
+								<source
+									srcset="./images/team3.jpg 1x, ./images/team3@2x.jpg 2x"
+									media="(max-width: 767px)"
+								/>
+								<img src="./images/team3.jpg" alt="Camila Garcia Image" />
 							</picture>
 							<div class="text">
 								<h3 class="section-name">Camila Garcia</h3>
@@ -264,13 +283,19 @@
 						</li>
 						<li class="team-card">
 							<picture>
-								<img
-									loading="lazy"
+								<source
 									srcset="./images/team4.jpg 1x, ./images/team4@2x.jpg 2x"
-									src="./images/team4.jpg"
-									width="264"
-									alt="Daniel Wilson Image"
+									media="(min-width: 1158px)"
 								/>
+								<source
+									srcset="./images/team4.jpg 1x, ./images/team4@2x.jpg 2x"
+									media="(min-width: 768px)"
+								/>
+								<source
+									srcset="./images/team4.jpg 1x, ./images/team4@2x.jpg 2x"
+									media="(max-width: 767px)"
+								/>
+								<img src="./images/team4.jpg" alt="Daniel Wilson Image" />
 							</picture>
 							<div class="text">
 								<h3 class="section-name">Daniel Wilson</h3>
@@ -317,17 +342,19 @@
 						<li class="portfolio-card">
 							<div class="image">
 								<picture>
-									<img
-										loading="lazy"
-										srcset="
-											./images/portfolio1.jpg    1x,
-											./images/portfolio1@2x.jpg 2x
-										"
-										src="./images/portfolio1.jpg"
-										width="360"
-										height="300"
-										alt="Baking App"
+									<source
+										srcset="./images/portfolio1.jpg 1x, ./images/portfolio1@2x.jpg 2x"
+										media="(min-width: 1158px)"
 									/>
+									<source
+										srcset="./images/portfolio1.jpg 1x, ./images/portfolio1@2x.jpg 2x"
+										media="(min-width: 768px)"
+									/>
+									<source
+										srcset="./images/portfolio1.jpg 1x, ./images/portfolio1@2x.jpg 2x"
+										media="(max-width: 767px)"
+									/>
+									<img src="./images/portfolio1.jpg" alt="Banking App" />
 								</picture>
 								<p class="portfolio-text">
 									14 Stylish and User-Friendly App Design Concepts · Task
@@ -343,17 +370,19 @@
 						<li class="portfolio-card">
 							<div class="image">
 								<picture>
-									<img
-										loading="lazy"
-										srcset="
-											./images/portfolio2.jpg    1x,
-											./images/portfolio2@2x.jpg 2x
-										"
-										src="./images/portfolio2.jpg"
-										width="360"
-										height="300"
-										alt="Cashless Payment"
+									<source
+										srcset="./images/portfolio2.jpg 1x, ./images/portfolio2@2x.jpg 2x"
+										media="(min-width: 1158px)"
 									/>
+									<source
+										srcset="./images/portfolio2.jpg 1x, ./images/portfolio2@2x.jpg 2x"
+										media="(min-width: 768px)"
+									/>
+									<source
+										srcset="./images/portfolio2.jpg 1x, ./images/portfolio2@2x.jpg 2x"
+										media="(max-width: 767px)"
+									/>
+									<img src="./images/portfolio2.jpg" alt="Cashless Payment" />
 								</picture>
 								<p class="portfolio-text">
 									14 Stylish and User-Friendly App Design Concepts · Task
@@ -369,17 +398,19 @@
 						<li class="portfolio-card">
 							<div class="image">
 								<picture>
-									<img
-										loading="lazy"
-										srcset="
-											./images/portfolio3.jpg    1x,
-											./images/portfolio3@2x.jpg 2x
-										"
-										src="./images/portfolio3.jpg"
-										width="360"
-										height="300"
-										alt="Meditation App"
+									<source
+										srcset="./images/portfolio3.jpg 1x, ./images/portfolio3@2x.jpg 2x"
+										media="(min-width: 1158px)"
 									/>
+									<source
+										srcset="./images/portfolio3.jpg 1x, ./images/portfolio3@2x.jpg 2x"
+										media="(min-width: 768px)"
+									/>
+									<source
+										srcset="./images/portfolio3.jpg 1x, ./images/portfolio3@2x.jpg 2x"
+										media="(max-width: 767px)"
+									/>
+									<img src="./images/portfolio3.jpg" alt="Meditation App" />
 								</picture>
 								<p class="portfolio-text">
 									14 Stylish and User-Friendly App Design Concepts · Task
@@ -395,17 +426,19 @@
 						<li class="portfolio-card">
 							<div class="image">
 								<picture>
-									<img
-										loading="lazy"
-										srcset="
-											./images/portfolio4.jpg    1x,
-											./images/portfolio4@2x.jpg 2x
-										"
-										src="./images/portfolio4.jpg"
-										width="360"
-										height="300"
-										alt="Taxi Service"
+									<source
+										srcset="./images/portfolio4.jpg 1x, ./images/portfolio4@2x.jpg 2x"
+										media="(min-width: 1158px)"
 									/>
+									<source
+										srcset="./images/portfolio4.jpg 1x, ./images/portfolio4@2x.jpg 2x"
+										media="(min-width: 768px)"
+									/>
+									<source
+										srcset="./images/portfolio4.jpg 1x, ./images/portfolio4@2x.jpg 2x"
+										media="(max-width: 767px)"
+									/>
+									<img src="./images/portfolio4.jpg" alt="Taxi Service" />
 								</picture>
 								<p class="portfolio-text">
 									14 Stylish and User-Friendly App Design Concepts · Task
@@ -421,17 +454,19 @@
 						<li class="portfolio-card">
 							<div class="image">
 								<picture>
-									<img
-										loading="lazy"
-										srcset="
-											./images/portfolio5.jpg    1x,
-											./images/portfolio5@2x.jpg 2x
-										"
-										src="./images/portfolio5.jpg"
-										width="360"
-										height="300"
-										alt="Screen Illustrations"
+									<source
+										srcset="./images/portfolio5.jpg 1x, ./images/portfolio5@2x.jpg 2x"
+										media="(min-width: 1158px)"
 									/>
+									<source
+										srcset="./images/portfolio5.jpg 1x, ./images/portfolio5@2x.jpg 2x"
+										media="(min-width: 768px)"
+									/>
+									<source
+										srcset="./images/portfolio5.jpg 1x, ./images/portfolio5@2x.jpg 2x"
+										media="(max-width: 767px)"
+									/>
+									<img src="./images/portfolio5.jpg" alt="Screen Illustrations" />
 								</picture>
 								<p class="portfolio-text">
 									14 Stylish and User-Friendly App Design Concepts · Task
@@ -447,17 +482,19 @@
 						<li class="portfolio-card">
 							<div class="image">
 								<picture>
-									<img
-										loading="lazy"
-										srcset="
-											./images/portfolio6.jpg    1x,
-											./images/portfolio6@2x.jpg 2x
-										"
-										src="./images/portfolio6.jpg"
-										width="360"
-										height="300"
-										alt="Online Courses"
+									<source
+										srcset="./images/portfolio6.jpg 1x, ./images/portfolio6@2x.jpg 2x"
+										media="(min-width: 1158px)"
 									/>
+									<source
+										srcset="./images/portfolio6.jpg 1x, ./images/portfolio6@2x.jpg 2x"
+										media="(min-width: 768px)"
+									/>
+									<source
+										srcset="./images/portfolio6.jpg 1x, ./images/portfolio6@2x.jpg 2x"
+										media="(max-width: 767px)"
+									/>
+									<img src="./images/portfolio6.jpg" alt="Online Courses" />
 								</picture>
 								<p class="portfolio-text">
 									14 Stylish and User-Friendly App Design Concepts · Task
