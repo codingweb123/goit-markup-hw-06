@@ -1,0 +1,879 @@
+@import "vars";
+@import "mixin";
+@import "fonts";
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto';
+}
+
+body {
+    background: #fff;
+}
+ul {
+    list-style: none;
+}
+input, button, textarea {
+    outline: none;
+    border: 0;
+}
+a {
+    text-decoration: none;
+}
+address {
+    font-style: normal;
+}
+.container {
+    max-width: 320px;
+    @include mobile {
+        max-width: 768px;
+    }
+    @include computer {
+        max-width: 1158px;
+    }
+    margin: 0 auto;
+    padding: 0 16px;
+}
+
+.header {
+    padding: 16px;
+    @include computer {
+        padding: 24px;
+    }
+    border-bottom: 1px solid $accent;
+    box-shadow: 0px 1px 6px 0px #2E2F4214, 0px 1px 1px 0px #2E2F4229, 0px 2px 1px 0px #2E2F4214;
+    .container {
+        padding: 0;
+    }
+    .logo {
+        font-size: 18px;
+        line-height: 1.17;
+        letter-spacing: 0.03em;
+        text-transform: uppercase;
+        font-family: 'Raleway';
+        color: $primary;
+        span {
+            font-family: 'Raleway';
+            color: $dark;
+        }
+    }
+    .menu_open {
+        display: flex;
+        @include tablet {
+            display: none;
+        }
+    }
+    .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .header-list {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        @include tablet {
+            width: 100%;
+        }
+        @include computer {
+            width: unset;
+            justify-content: center;
+            gap: 76px;
+        }
+        ul {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-grow: 1;
+            gap: 40px;
+            li a {
+                position: relative;
+                font-size: 16px;
+                line-height: 1.5;
+                font-weight: 500;
+                letter-spacing: 0.02em;
+                color: $dark;
+                transition: color $time $transition;
+                &:after {
+                    position: absolute;
+                    left: 0;
+                    bottom: -1px;
+                    content: "";
+                    width: 100%;
+                    height: 4px;
+                    border-radius: 4px;
+                    visibility: hidden;
+                    transform: translateY(0px);
+                    transition: transform $time $transition;
+                    background: $pressed;
+                }
+                &.active, &:hover {
+                    color: $pressed;
+                    &:after {
+                        visibility: visible;
+                        transform: translateY(31px);
+                        @include computer {
+                            transform: translateY(26px);
+                        }
+                    }
+                }
+            }
+        }
+    }
+    address ul {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        @include computer {
+            flex-direction: row;
+            gap: 40px;
+        }
+        li a {
+            font-size: 12px;
+            line-height: 1.17;
+            letter-spacing: 0.04em;
+            color: $text;
+            &:hover, &:focus {
+                color: $pressed;
+            }
+            @include computer {
+                font-size: 16px;
+                line-height: 1.5;
+                letter-spacing: 0.02em;
+            }
+        }
+    }
+    .header-list > ul,
+    address {
+        display: none;
+        @include tablet {
+            display: flex;
+        }
+    }
+}
+.section {
+    padding: 96px 0;
+    @include computer {
+        padding: 120px 0;
+    }
+}
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+.solutions {
+    padding: 72px 0;
+    @include tablet {
+        padding: 112px 0;
+    }
+    @include computer {
+        padding: 188px 0;
+    }
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    h1 {
+        color: #fff;
+        font-size: 36px;
+        line-height: 1.11;
+        letter-spacing: 0.02em;
+        text-align: center;
+        max-width: 216px;
+        @include tablet {
+            max-width: 496px;
+            font-size: 56px;
+            line-height: 1.07;
+            letter-spacing: 0.02em;
+        }
+    }
+    .btn {
+        font-size: 16px;
+        line-height: 1.5;
+        letter-spacing: 0.04em;
+        padding: 16px 32px;
+        border-radius: 4px;
+        background: $primary;
+        color: #fff;
+        box-shadow: 0px 4px 4px 0px #00000026;
+        cursor: pointer;
+        transition: background-color $time $transition;
+        &:hover, &:focus {
+            background-color: $pressed;
+        }
+    }
+    .container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 72px;
+        padding: 0;
+        @include tablet {
+            gap: 36px;
+        }
+        @include computer {
+            gap: 48px;
+        }
+    }
+    background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url("../images/hero.webp");
+    @include tablet {
+        background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url("../images/hero.webp");
+        @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+            background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url("../images/hero@2x.webp");
+        }
+    }
+    @include computer {
+        background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url("../images/hero.webp");
+        @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+            background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url("../images/hero@2x.webp");
+        }
+    }
+}
+.skills {
+    ul {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 72px;
+        li {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            div.icon {
+                @include computer {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    padding: 24px 0;
+                    border-radius: 4px;
+                    border: 1px solid $subtle-text;
+                    background: $light;
+                }
+            }
+            svg.icon {
+                @include computer {
+                    display: block;
+                }
+            }
+        }
+        @include tablet {
+            flex-wrap: wrap;
+            flex-direction: row;
+            gap: 72px 24px;
+        }
+        @include computer {
+            flex-wrap: nowrap;
+            gap: 24px;
+        }
+    }
+    .icon {
+        display: none;
+    }
+    h3 {
+        font-size: 36px;
+        line-height: 1.11;
+        letter-spacing: 0.02em;
+        font-family: 'Raleway';
+        text-align: center;
+        color: $dark;
+        @include tablet {
+            text-align: unset;
+        }
+        @include computer {
+            font-size: 20px;
+            line-height: 1.2;
+            letter-spacing: 0.02em;
+            color: $dark;
+        }
+    }
+    p {
+        max-width: 288px;
+        font-size: 16px;
+        line-height: 1.5;
+        letter-spacing: 0.02em;
+        font-weight: 500;
+        color: $text;
+        @include computer {
+            max-width: 264px;
+            min-width: 264px;
+            font-weight: 400;
+        }
+    }
+}
+.icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 24px;
+}
+a.icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: $primary;
+}
+.portfolio h2,
+.team h2 {
+    font-size: 36px;
+    line-height: 1.11;
+    letter-spacing: 0.02em;
+    color: $dark;
+}
+.team {
+    background: $light;
+    .team-list {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 72px;
+        @include tablet {
+            flex-wrap: wrap;
+            flex-direction: row;
+            gap: 64px 24px;
+        }
+        @include computer {
+            flex-wrap: nowrap;
+            gap: 24px;
+        }
+    }
+    .team-card {
+        max-width: 264px;
+        border-radius: 0 0 4px 4px;
+        box-shadow: 0px 2px 1px 0px #2E2F4214, 0px 1px 1px 0px #2E2F4229, 0px 1px 6px 0px #2E2F4214;
+        background: #fff;
+        .icon {
+            transition: background-color $time $transition;
+        }
+        &:hover, &:focus {
+            .icon {
+                background-color: $pressed;
+            }
+        }
+        picture,
+        img {
+            width: 100%;
+        }
+    }
+    .text {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        padding: 16px 32px;
+        text-align: center;
+        h3 {
+            font-size: 20px;
+            line-height: 1.2;
+            letter-spacing: 0.02em;
+            color: $dark;
+        }
+        p {
+            font-size: 16px;
+            line-height: 1.5;
+            letter-spacing: 0.02em;
+            color: $text;
+        }
+    }
+    .container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 72px;
+        padding: 0 16px;
+    }
+}
+.portfolio {
+    .portfolio-list {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 48px;
+        @include tablet {
+            flex-wrap: wrap;
+            flex-direction: row;
+            gap: 72px 24px;
+        }
+    }
+    .portfolio-card {
+        max-width: 288px;
+        border-radius: 0 0 4px 4px;
+        box-shadow: 0px 2px 1px 0px #2E2F4214, 0px 1px 1px 0px #2E2F4229, 0px 1px 6px 0px #2E2F4214;
+        background: #fff;
+        overflow: hidden;
+        &:focus, &:active, &:hover {
+            .portfolio-text {
+                visibility: visible;
+                transform: translateY(0);
+            }
+        }
+        picture,
+        img {
+            width: 100%;
+        }
+        .image {
+            position: relative;
+        }
+        .portfolio-text {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            visibility: hidden;
+            padding: 40px 32px;
+            color: #fff;
+            font-size: 16px;
+            line-height: 1.5;
+            letter-spacing: 0.02em;
+            transform: translateY(105%);
+            background: $primary;
+            transition: transform $time $transition, visibility $time $transition;
+        }
+    }
+
+    .text {
+        position: relative;
+        z-index: 99;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        padding: 32px 16px;
+        background: #fff;
+        h3 {
+            font-size: 20px;
+            line-height: 1.2;
+            letter-spacing: 0.02em;
+            color: $dark;
+        }
+
+        p {
+            font-size: 16px;
+            line-height: 1.5;
+            letter-spacing: 0.02em;
+            color: $text;
+        }
+    }
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 72px;
+    }
+}
+.footer {
+    padding: 96px 0;
+    @include computer {
+        padding: 100px 0;
+    }
+    background: $dark;
+    .container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 72px;
+        @include tablet {
+            flex-wrap: wrap;
+            flex-direction: row;
+            gap: 72px 24px;
+        }
+        @include computer {
+            flex-direction: row;
+            flex-wrap: nowrap;
+            gap: 80px;
+        }
+    }
+    p {
+        font-size: 16px;
+        line-height: 1.5;
+        letter-spacing: 0.02em;
+        font-weight: 500;
+        color: $light;
+    }
+    .footer-text {
+        font-weight: 400;
+    }
+    .content {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        p {
+            max-width: 288px;
+            @include tablet {
+                max-width: 264px;
+                min-width: 264px;
+            }
+        }
+    }
+    .subscribe {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        @include tablet {
+            flex-basis: calc(100% - 216px);
+        }
+        p {
+            text-align: center;
+            @include tablet {
+                text-align: left;
+            }
+        }
+        input {
+            max-width: 288px;
+            min-width: 288px;
+            height: 40px;
+            padding: 8px 16px;
+            border: 1px solid #fff;
+            border-radius: 4px;
+            box-shadow: 0px 4px 4px 0px #00000026;
+            color: #fff;
+            background: transparent;
+            ::placeholder {
+                font-size: 12px;
+                line-height: 1;
+                letter-spacing: 0.04em;
+                color: #fff;
+            }
+        }
+        button {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 16px;
+            max-width: 165px;
+            padding: 8px 24px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            line-height: 1.5;
+            letter-spacing: 0.04em;
+            color: #fff;
+            background: $primary;
+            transition: background-color $time $transition;
+            &:hover, &:focus {
+                background-color: $pressed;
+            }
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 16px;
+            @include tablet {
+                flex-direction: row;
+                gap: 24px;
+            }
+        }
+    }
+    .socials {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        text-align: center;
+        font-size: 16px;
+        line-height: 1.5;
+        letter-spacing: 0.02em;
+        color: #fff;
+        @include tablet {
+            text-align: left;
+        }
+        @include computer {
+            margin-left: 40px;
+        }
+        .icons {
+            gap: 16px;
+            a.icon {
+                transition: background-color $time $transition;
+            }
+            a.icon:hover {
+                background-color: $success;
+            }
+        }
+    }
+    .logo {
+        font-size: 18px;
+        line-height: 1.17;
+        letter-spacing: 0.03em;
+        text-transform: uppercase;
+        text-align: center;
+        font-family: 'Raleway';
+        color: $primary;
+        @include tablet {
+            text-align: left;
+        }
+        span {
+            font-family: 'Raleway';
+            color: #fff;
+        }
+    }
+}
+.modal-overlay .close,
+.menu-overlay .close {
+    position: absolute;
+    top: 24px;
+    right: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    border: 1px solid #0000001A;
+    cursor: pointer;
+    background: $accent;
+    transition: background-color $time $transition;
+    &:hover, &:focus {
+        fill: #fff;
+        background-color: $pressed;
+    }
+}
+.modal-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    visibility: hidden;
+    transition: visibility $time $transition;
+    &.is-open {
+        visibility: visible;
+        pointer-events: all;
+        background: #2E2F4266;
+        .modal {
+            opacity: 1;
+        }
+    }
+    .modal {
+        position: relative;
+        max-width: 288px;
+        @include tablet {
+            max-width: 408px;
+        }
+        padding: 24px 16px;
+        opacity: 0;
+        border-radius: 4px;
+        background: $modal;
+        box-shadow: 0px 1px 1px 0px #00000024, 0px 1px 3px 0px #0000001F, 0px 2px 1px 0px #00000033;
+        transition: opacity $time $transition;
+        .terms a {
+            text-decoration: underline;
+            color: $primary;
+        }
+        .comment-group {
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+            textarea {
+                font-size: 12px;
+                line-height: 1.17;
+                letter-spacing: 0.04em;
+                padding: 8px 16px;
+                color: $subtle-text;
+                border-radius: 4px;
+                border: 1px solid #2E2F4266;
+                &:focus, &:active, &:focus-visible {
+                    border-color: $primary;
+                }
+            }
+        }
+        .checkbox-container {
+            display: flex;
+            gap: 8px;
+            justify-content: center;
+            align-items: center;
+            margin-top: 8px;
+            span {
+                display: inline-flex;
+                justify-content: center;
+                align-items: center;
+                fill: transparent;
+                width: 16px;
+                height: 16px;
+                border: 1px solid rgba(46, 47, 66, 0.4);
+                border-radius: 2px;
+                transition: background-color $time $transition,
+                    border $time $transition,
+                    fill $time $transition;
+            }
+            input {
+                .icon {
+                    position: absolute;
+                    opacity: 0;
+                    margin: 4px 4px 4px 3px;
+                    transition: opacity $time $transition;
+                }
+                &:checked {
+                    background-color: $pressed;
+                }
+                &:checked ~ label > span {
+                    border: none;
+                    background-color: $pressed;
+                    fill: var(--light);
+                }
+                &:checked ~ label > span > .icon {
+                    opacity: 1;
+                }
+            }
+        }
+        .submit {
+            align-self: center;
+            margin-top: 16px;
+            width: 169px;
+            padding: 16px 0;
+            text-align: center;
+            font-size: 16px;
+            line-height: 1.5;
+            letter-spacing: 0.02em;
+            color: #fff;
+            border-radius: 4px;
+            cursor: pointer;
+            box-shadow: 0px 4px 4px 0px #00000026;
+            background: $primary;
+        }
+        p {
+            margin-top: 48px;
+            margin-bottom: 16px;
+            font-size: 16px;
+            line-height: 1.5;
+            letter-spacing: 0.02em;
+            font-weight: 500;
+            text-align: center;
+            color: $dark;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            .input-container {
+                position: relative;
+                display: flex;
+                align-items: center;
+            }
+            input:not([type="checkbox"]) {
+                width: 100%;
+                height: 40px;
+                max-width: 100%;
+                padding-left: 38px;
+                margin-top: 4px;
+                border-radius: 4px;
+                border: 1px solid #2E2F4266;
+                transition: border-color $time $transition;
+                &:focus, &:active, &:focus-visible {
+                    border-color: $primary;
+                }
+            }
+            label {
+                font-size: 12px;
+                line-height: 1.17;
+                letter-spacing: 0.04em;
+                color: $subtle-text;
+            }
+            .form-group:not(.checkbox-container) .icon {
+                position: absolute;
+                left: 16px;
+                top: 24px;
+                transform: translateY(-50%);
+            }
+        }
+    }
+}
+.menu-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 999;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
+        visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    background-color: #fff;
+    &.is-open {
+        opacity: 1;
+        pointer-events: all;
+    }
+    .modal {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        padding: 16px 24px;
+        transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+        background-color: #fff;
+    }
+    .close {
+        background-color: transparent;
+    }
+    .menu {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 100%;
+        height: 100%;
+        padding: 72px 16px;
+        gap: 48px;
+        .icons {
+            display: flex;
+            margin-top: 48px;
+            margin-bottom: 48px;
+        }
+        .menu-links {
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+            li a.active {
+                color: $pressed;
+            }
+        }
+        .menu-link {
+            font-weight: 700;
+            font-size: 36px;
+            line-height: 1.11;
+            letter-spacing: 0.02em;
+            color: $dark;
+        }
+        .menu-bottom {
+            position: absolute;
+            bottom: 0;
+        }
+        .header-contacts ul {
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+            li a {
+                font-weight: 500;
+                font-size: 20px;
+                line-height: 1.2;
+                letter-spacing: 0.02em;
+                color: $text;
+            }
+            li:first-child a {
+                color: $primary;
+            }
+        }
+    }
+}
