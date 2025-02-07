@@ -1,4 +1,5 @@
 @import "vars";
+@import "normalize";
 @import "mixin";
 @import "fonts";
 *,
@@ -6,7 +7,6 @@
 *::after {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
     font-family: 'Roboto', sans-serif;
 }
 
@@ -375,10 +375,6 @@ a.icon {
                 background-color: $pressed;
             }
         }
-        picture,
-        img {
-            width: 100%;
-        }
     }
     .text {
         display: flex;
@@ -432,10 +428,6 @@ a.icon {
                 visibility: visible;
                 transform: translateY(0);
             }
-        }
-        picture,
-        img {
-            width: 100%;
         }
         .image {
             position: relative;

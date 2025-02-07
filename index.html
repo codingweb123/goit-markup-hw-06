@@ -3,27 +3,15 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Web Studio website" />
     <title>Homework - 6</title>
     <link
       rel="preload"
-      fetchpriority="high"
       as="image"
-      href="./images/hero.webp"
-      type="image/webp"
-      media="(max-width: 767px)"
-      crossorigin="anonymous"
-    />
-    <link
-      rel="preload"
-      fetchpriority="high"
-      as="image"
-      href="./images/hero@2x.webp"
-      type="image/webp"
-      media="(min-width: 768px)"
-      crossorigin="anonymous"
+      href="/images/hero.webp"
+      imagesrcset="./images/hero.webp 1x ./images/hero@2x.webp 2x"
     />
     <link rel="stylesheet" href="./css/styles.css" />
-    <link rel="stylesheet" href="./css/normalize.css" />
   </head>
   <body>
     <header class="header">
@@ -35,10 +23,35 @@
           </a>
           <ul>
             <li>
-              <a class="header-link active" href="./index.html">Studio</a>
+              <a
+                class="header-link active"
+                aria-label="Studio link"
+                role="link"
+                href="./index.html"
+              >
+                Studio
+              </a>
             </li>
-            <li><a class="header-link" href="#link">Portfolio</a></li>
-            <li><a class="header-link" href="#link">Contacts</a></li>
+            <li>
+              <a
+                class="header-link"
+                href="#link"
+                aria-label="Portfolio link"
+                role="link"
+              >
+                Portfolio
+              </a>
+            </li>
+            <li>
+              <a
+                class="header-link"
+                href="#link"
+                aria-label="Contacts link"
+                role="link"
+              >
+                Contacts
+              </a>
+            </li>
           </ul>
         </nav>
         <address class="header-contacts">
@@ -55,7 +68,12 @@
             </li>
           </ul>
         </address>
-        <a href="#menu" class="menu_open" role="menuitem">
+        <a
+          href="#menu"
+          class="menu_open"
+          role="menuitem"
+          aria-label="Open menu"
+        >
           <svg
             width="24"
             height="24"
@@ -142,18 +160,25 @@
                 <source
                   srcset="./images/team1.webp 1x, ./images/team1@2x.webp 2x"
                   media="(min-width: 1158px)"
+                  width="264"
+                  height="260"
                 />
                 <source
                   srcset="./images/team1.webp 1x, ./images/team1@2x.webp 2x"
                   media="(min-width: 768px)"
+                  width="264"
+                  height="260"
                 />
                 <source
                   srcset="./images/team1.webp 1x, ./images/team1@2x.webp 2x"
                   media="(max-width: 767px)"
+                  width="264"
+                  height="260"
                 />
                 <img
                   src="./images/team1.webp"
-                  sizes="(min-width: 1158px) 264px, (min-width: 768px) 264px, 264px"
+                  width="264"
+                  height="260"
                   loading="lazy"
                   alt="Mark Guerrero Image"
                 />
@@ -163,28 +188,48 @@
                 <p class="section-text">Product Designer</p>
                 <ul class="icons">
                   <li class="icon-element">
-                    <a href="#link" class="icon">
+                    <a
+                      href="#link"
+                      aria-label="Social link"
+                      role="link"
+                      class="icon"
+                    >
                       <svg width="16" height="16" class="icon">
                         <use href="./images/icons.svg#icon-instagram-2-1"></use>
                       </svg>
                     </a>
                   </li>
                   <li class="icon-element">
-                    <a href="#link" class="icon">
+                    <a
+                      href="#link"
+                      aria-label="Social link"
+                      role="link"
+                      class="icon"
+                    >
                       <svg width="16" height="16" class="icon">
                         <use href="./images/icons.svg#icon-twitter-1-1"></use>
                       </svg>
                     </a>
                   </li>
                   <li class="icon-element">
-                    <a href="#link" class="icon">
+                    <a
+                      href="#link"
+                      aria-label="Social link"
+                      role="link"
+                      class="icon"
+                    >
                       <svg width="16" height="16" class="icon">
                         <use href="./images/icons.svg#icon-facebook-1-1"></use>
                       </svg>
                     </a>
                   </li>
                   <li class="icon-element">
-                    <a href="#link" class="icon">
+                    <a
+                      href="#link"
+                      aria-label="Social link"
+                      role="link"
+                      class="icon"
+                    >
                       <svg width="16" height="16" class="icon">
                         <use href="./images/icons.svg#icon-linkedin-1-1"></use>
                       </svg>
@@ -198,18 +243,25 @@
                 <source
                   srcset="./images/team2.webp 1x, ./images/team2@2x.webp 2x"
                   media="(min-width: 1158px)"
+                  width="264"
+                  height="260"
                 />
                 <source
                   srcset="./images/team2.webp 1x, ./images/team2@2x.webp 2x"
                   media="(min-width: 768px)"
+                  width="264"
+                  height="260"
                 />
                 <source
                   srcset="./images/team2.webp 1x, ./images/team2@2x.webp 2x"
                   media="(max-width: 767px)"
+                  width="264"
+                  height="260"
                 />
                 <img
                   src="./images/team2.webp"
-                  sizes="(min-width: 1158px) 264px, (min-width: 768px) 264px, 264px"
+                  width="264"
+                  height="260"
                   loading="lazy"
                   alt="Tom Ford Image"
                 />
@@ -219,28 +271,48 @@
                 <p class="section-text">Frontend Developer</p>
                 <ul class="icons">
                   <li class="icon-element">
-                    <a href="#link" class="icon">
+                    <a
+                      href="#link"
+                      aria-label="Social link"
+                      role="link"
+                      class="icon"
+                    >
                       <svg width="16" height="16" class="icon">
                         <use href="./images/icons.svg#icon-instagram-2-1"></use>
                       </svg>
                     </a>
                   </li>
                   <li class="icon-element">
-                    <a href="#link" class="icon">
+                    <a
+                      href="#link"
+                      aria-label="Social link"
+                      role="link"
+                      class="icon"
+                    >
                       <svg width="16" height="16" class="icon">
                         <use href="./images/icons.svg#icon-twitter-1-1"></use>
                       </svg>
                     </a>
                   </li>
                   <li class="icon-element">
-                    <a href="#link" class="icon">
+                    <a
+                      href="#link"
+                      aria-label="Social link"
+                      role="link"
+                      class="icon"
+                    >
                       <svg width="16" height="16" class="icon">
                         <use href="./images/icons.svg#icon-facebook-1-1"></use>
                       </svg>
                     </a>
                   </li>
                   <li class="icon-element">
-                    <a href="#link" class="icon">
+                    <a
+                      href="#link"
+                      aria-label="Social link"
+                      role="link"
+                      class="icon"
+                    >
                       <svg width="16" height="16" class="icon">
                         <use href="./images/icons.svg#icon-linkedin-1-1"></use>
                       </svg>
@@ -265,7 +337,8 @@
                 />
                 <img
                   src="./images/team3.webp"
-                  sizes="(min-width: 1158px) 264px, (min-width: 768px) 264px, 264px"
+                  width="264"
+                  height="260"
                   loading="lazy"
                   alt="Camila Garcia Image"
                 />
@@ -275,28 +348,48 @@
                 <p class="section-text">Marketing</p>
                 <ul class="icons">
                   <li class="icon-element">
-                    <a href="#link" class="icon">
+                    <a
+                      href="#link"
+                      aria-label="Social link"
+                      role="link"
+                      class="icon"
+                    >
                       <svg width="16" height="16" class="icon">
                         <use href="./images/icons.svg#icon-instagram-2-1"></use>
                       </svg>
                     </a>
                   </li>
                   <li class="icon-element">
-                    <a href="#link" class="icon">
+                    <a
+                      href="#link"
+                      aria-label="Social link"
+                      role="link"
+                      class="icon"
+                    >
                       <svg width="16" height="16" class="icon">
                         <use href="./images/icons.svg#icon-twitter-1-1"></use>
                       </svg>
                     </a>
                   </li>
                   <li class="icon-element">
-                    <a href="#link" class="icon">
+                    <a
+                      href="#link"
+                      aria-label="Social link"
+                      role="link"
+                      class="icon"
+                    >
                       <svg width="16" height="16" class="icon">
                         <use href="./images/icons.svg#icon-facebook-1-1"></use>
                       </svg>
                     </a>
                   </li>
                   <li class="icon-element">
-                    <a href="#link" class="icon">
+                    <a
+                      href="#link"
+                      aria-label="Social link"
+                      role="link"
+                      class="icon"
+                    >
                       <svg width="16" height="16" class="icon">
                         <use href="./images/icons.svg#icon-linkedin-1-1"></use>
                       </svg>
@@ -321,7 +414,8 @@
                 />
                 <img
                   src="./images/team4.webp"
-                  sizes="(min-width: 1158px) 264px, (min-width: 768px) 264px, 264px"
+                  width="264"
+                  height="260"
                   loading="lazy"
                   alt="Daniel Wilson Image"
                 />
@@ -331,28 +425,48 @@
                 <p class="section-text">UI Designer</p>
                 <ul class="icons">
                   <li class="icon-element">
-                    <a href="#link" class="icon">
+                    <a
+                      href="#link"
+                      aria-label="Social link"
+                      role="link"
+                      class="icon"
+                    >
                       <svg width="16" height="16" class="icon">
                         <use href="./images/icons.svg#icon-instagram-2-1"></use>
                       </svg>
                     </a>
                   </li>
                   <li class="icon-element">
-                    <a href="#link" class="icon">
+                    <a
+                      href="#link"
+                      aria-label="Social link"
+                      role="link"
+                      class="icon"
+                    >
                       <svg width="16" height="16" class="icon">
                         <use href="./images/icons.svg#icon-twitter-1-1"></use>
                       </svg>
                     </a>
                   </li>
                   <li class="icon-element">
-                    <a href="#link" class="icon">
+                    <a
+                      href="#link"
+                      aria-label="Social link"
+                      role="link"
+                      class="icon"
+                    >
                       <svg width="16" height="16" class="icon">
                         <use href="./images/icons.svg#icon-facebook-1-1"></use>
                       </svg>
                     </a>
                   </li>
                   <li class="icon-element">
-                    <a href="#link" class="icon">
+                    <a
+                      href="#link"
+                      aria-label="Social link"
+                      role="link"
+                      class="icon"
+                    >
                       <svg width="16" height="16" class="icon">
                         <use href="./images/icons.svg#icon-linkedin-1-1"></use>
                       </svg>
@@ -377,6 +491,8 @@
                       ./images/portfolio1@2x.webp 2x
                     "
                     media="(min-width: 1158px)"
+                    width="360"
+                    height="300"
                   />
                   <source
                     srcset="
@@ -384,6 +500,8 @@
                       ./images/portfolio1@2x.webp 2x
                     "
                     media="(min-width: 768px)"
+                    width="356"
+                    height="300"
                   />
                   <source
                     srcset="
@@ -391,10 +509,13 @@
                       ./images/portfolio1@2x.webp 2x
                     "
                     media="(max-width: 767px)"
+                    width="288"
+                    height="280"
                   />
                   <img
                     src="./images/portfolio1.webp"
-                    sizes="(min-width: 1158px) 360px, (min-width: 768px) 356px, 288px"
+                    width="288"
+                    height="280"
                     loading="lazy"
                     alt="Banking App"
                   />
@@ -419,6 +540,8 @@
                       ./images/portfolio2@2x.webp 2x
                     "
                     media="(min-width: 1158px)"
+                    width="360"
+                    height="300"
                   />
                   <source
                     srcset="
@@ -426,6 +549,8 @@
                       ./images/portfolio2@2x.webp 2x
                     "
                     media="(min-width: 768px)"
+                    width="356"
+                    height="300"
                   />
                   <source
                     srcset="
@@ -433,10 +558,13 @@
                       ./images/portfolio2@2x.webp 2x
                     "
                     media="(max-width: 767px)"
+                    width="288"
+                    height="280"
                   />
                   <img
                     src="./images/portfolio2.webp"
-                    sizes="(min-width: 1158px) 360px, (min-width: 768px) 356px, 288px"
+                    width="288"
+                    height="280"
                     loading="lazy"
                     alt="Cashless Payment"
                   />
@@ -461,6 +589,8 @@
                       ./images/portfolio3@2x.webp 2x
                     "
                     media="(min-width: 1158px)"
+                    width="360"
+                    height="300"
                   />
                   <source
                     srcset="
@@ -468,6 +598,8 @@
                       ./images/portfolio3@2x.webp 2x
                     "
                     media="(min-width: 768px)"
+                    width="356"
+                    height="300"
                   />
                   <source
                     srcset="
@@ -475,10 +607,13 @@
                       ./images/portfolio3@2x.webp 2x
                     "
                     media="(max-width: 767px)"
+                    width="288"
+                    height="280"
                   />
                   <img
                     src="./images/portfolio3.webp"
-                    sizes="(min-width: 1158px) 360px, (min-width: 768px) 356px, 288px"
+                    width="288"
+                    height="280"
                     loading="lazy"
                     alt="Meditation App"
                   />
@@ -503,6 +638,8 @@
                       ./images/portfolio4@2x.webp 2x
                     "
                     media="(min-width: 1158px)"
+                    width="360"
+                    height="300"
                   />
                   <source
                     srcset="
@@ -510,6 +647,8 @@
                       ./images/portfolio4@2x.webp 2x
                     "
                     media="(min-width: 768px)"
+                    width="356"
+                    height="300"
                   />
                   <source
                     srcset="
@@ -517,10 +656,13 @@
                       ./images/portfolio4@2x.webp 2x
                     "
                     media="(max-width: 767px)"
+                    width="288"
+                    height="280"
                   />
                   <img
                     src="./images/portfolio4.webp"
-                    sizes="(min-width: 1158px) 360px, (min-width: 768px) 356px, 288px"
+                    width="288"
+                    height="280"
                     loading="lazy"
                     alt="Taxi Service"
                   />
@@ -545,6 +687,8 @@
                       ./images/portfolio5@2x.webp 2x
                     "
                     media="(min-width: 1158px)"
+                    width="360"
+                    height="300"
                   />
                   <source
                     srcset="
@@ -552,6 +696,8 @@
                       ./images/portfolio5@2x.webp 2x
                     "
                     media="(min-width: 768px)"
+                    width="356"
+                    height="300"
                   />
                   <source
                     srcset="
@@ -559,10 +705,13 @@
                       ./images/portfolio5@2x.webp 2x
                     "
                     media="(max-width: 767px)"
+                    width="288"
+                    height="280"
                   />
                   <img
                     src="./images/portfolio5.webp"
-                    sizes="(min-width: 1158px) 360px, (min-width: 768px) 356px, 288px"
+                    width="288"
+                    height="280"
                     loading="lazy"
                     alt="Screen Illustrations"
                   />
@@ -587,6 +736,8 @@
                       ./images/portfolio6@2x.webp 2x
                     "
                     media="(min-width: 1158px)"
+                    width="360"
+                    height="300"
                   />
                   <source
                     srcset="
@@ -594,6 +745,8 @@
                       ./images/portfolio6@2x.webp 2x
                     "
                     media="(min-width: 768px)"
+                    width="356"
+                    height="300"
                   />
                   <source
                     srcset="
@@ -601,10 +754,13 @@
                       ./images/portfolio6@2x.webp 2x
                     "
                     media="(max-width: 767px)"
+                    width="288"
+                    height="280"
                   />
                   <img
                     src="./images/portfolio6.webp"
-                    sizes="(min-width: 1158px) 360px, (min-width: 768px) 356px, 288px"
+                    width="288"
+                    height="280"
                     loading="lazy"
                     alt="Online Courses"
                   />
@@ -640,28 +796,28 @@
           <p class="socials-text">Social media</p>
           <ul class="icons">
             <li class="icon-element">
-              <a href="#link" class="icon">
+              <a href="#link" aria-label="Social link" role="link" class="icon">
                 <svg width="24" height="24" class="icon">
                   <use href="./images/icons.svg#icon-instagram-2-1"></use>
                 </svg>
               </a>
             </li>
             <li class="icon-element">
-              <a href="#link" class="icon">
+              <a href="#link" aria-label="Social link" role="link" class="icon">
                 <svg width="24" height="24" class="icon">
                   <use href="./images/icons.svg#icon-twitter-1-1"></use>
                 </svg>
               </a>
             </li>
             <li class="icon-element">
-              <a href="#link" class="icon">
+              <a href="#link" aria-label="Social link" role="link" class="icon">
                 <svg width="24" height="24" class="icon">
                   <use href="./images/icons.svg#icon-facebook-1-1"></use>
                 </svg>
               </a>
             </li>
             <li class="icon-element">
-              <a href="#link" class="icon">
+              <a href="#link" aria-label="Social link" role="link" class="icon">
                 <svg width="24" height="24" class="icon">
                   <use href="./images/icons.svg#icon-linkedin-1-1"></use>
                 </svg>
@@ -697,7 +853,12 @@
     </footer>
     <div class="modal-overlay">
       <div class="modal">
-        <button type="button" class="close">
+        <button
+          type="button"
+          role="button"
+          aria-label="Close modal"
+          class="close"
+        >
           <svg width="8" height="8" class="close-icon">
             <use href="./images/icons.svg#icon-close-black-18dp-2-1"></use>
           </svg>
@@ -793,7 +954,12 @@
     </div>
     <div class="menu-overlay">
       <div class="menu">
-        <button type="button" class="close">
+        <button
+          type="button"
+          role="button"
+          aria-label="Close modal"
+          class="close"
+        >
           <svg width="8" height="8" class="close-icon">
             <use href="./images/icons.svg#icon-close-black-18dp-2-1"></use>
           </svg>
@@ -802,8 +968,26 @@
           <li>
             <a class="menu-link active" href="./index.html">Studio</a>
           </li>
-          <li><a class="menu-link" href="#link">Portfolio</a></li>
-          <li><a class="menu-link" href="#link">Contacts</a></li>
+          <li>
+            <a
+              class="menu-link"
+              href="#link"
+              aria-label="Social link"
+              role="link"
+            >
+              Portfolio
+            </a>
+          </li>
+          <li>
+            <a
+              class="menu-link"
+              href="#link"
+              aria-label="Social link"
+              role="link"
+            >
+              Contacts
+            </a>
+          </li>
         </ul>
         <div class="menu-bottom">
           <address class="header-contacts">
@@ -822,28 +1006,28 @@
           </address>
           <ul class="icons">
             <li class="icon-element">
-              <a href="#link" class="icon">
+              <a href="#link" aria-label="Social link" role="link" class="icon">
                 <svg width="24" height="24" class="icon">
                   <use href="./images/icons.svg#icon-instagram-2-1"></use>
                 </svg>
               </a>
             </li>
             <li class="icon-element">
-              <a href="#link" class="icon">
+              <a href="#link" aria-label="Social link" role="link" class="icon">
                 <svg width="24" height="24" class="icon">
                   <use href="./images/icons.svg#icon-twitter-1-1"></use>
                 </svg>
               </a>
             </li>
             <li class="icon-element">
-              <a href="#link" class="icon">
+              <a href="#link" aria-label="Social link" role="link" class="icon">
                 <svg width="24" height="24" class="icon">
                   <use href="./images/icons.svg#icon-facebook-1-1"></use>
                 </svg>
               </a>
             </li>
             <li class="icon-element">
-              <a href="#link" class="icon">
+              <a href="#link" aria-label="Social link" role="link" class="icon">
                 <svg width="24" height="24" class="icon">
                   <use href="./images/icons.svg#icon-linkedin-1-1"></use>
                 </svg>
