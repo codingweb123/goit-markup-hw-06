@@ -3,8 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="Content-Security-Policy" content="script-src 'none'" />
-    <meta http-equiv="cache-control" content="max-age=31536000" />
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="script-src 'self'; style-src 'self' 'unsafe-inline'"
+    />
     <title>Homework - 6</title>
     <link
       rel="preload"
@@ -24,8 +26,13 @@
       media="(min-width: 768px)"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="css/normalize.css" />
-    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="preload" href="styles.css" as="style" />
+    <link
+      rel="stylesheet"
+      href="normalize.css"
+      media="print"
+      onload="this.media='all'"
+    />
   </head>
   <body>
     <header class="header">
@@ -855,7 +862,7 @@
         </div>
       </div>
     </div>
-    <script>
+    <script defer>
       document.querySelector('.menu_open').onclick = e => {
         e.preventDefault();
         document.querySelector('.menu-overlay').classList.add('is-open');
