@@ -7,7 +7,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Roboto';
+    font-family: 'Roboto', sans-serif;
 }
 
 body {
@@ -22,6 +22,9 @@ input, button, textarea {
 }
 a {
     text-decoration: none;
+}
+textarea {
+    resize: none;
 }
 address {
     font-style: normal;
@@ -49,6 +52,7 @@ address {
         padding: 0;
     }
     .logo {
+        display: flex;
         font-size: 18px;
         line-height: 1.17;
         letter-spacing: 0.03em;
@@ -227,15 +231,21 @@ address {
         }
     }
     background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url("../images/hero.webp");
+    @include mobile {
+        background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url("../images/hero.webp");
+        @include resolution {
+            background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url("../images/hero@2x.webp");
+        }
+    }
     @include tablet {
         background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url("../images/hero.webp");
-        @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+        @include resolution {
             background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url("../images/hero@2x.webp");
         }
     }
     @include computer {
         background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url("../images/hero.webp");
-        @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+        @include resolution {
             background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url("../images/hero@2x.webp");
         }
     }

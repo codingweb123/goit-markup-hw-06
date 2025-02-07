@@ -1,15 +1,23 @@
 @mixin computer {
     @media screen and (min-width: $computer) {
-        @content;
+        @content
     }
 }
+
 @mixin tablet {
     @media screen and (min-width: $tablet) {
-        @content;
+        @content
     }
 }
+
 @mixin mobile {
     @media screen and (min-width: $mobile) {
+        @content
+    }
+}
+
+@mixin resolution {
+    @media (min-resolution: 2x) {
         @content;
     }
 }
