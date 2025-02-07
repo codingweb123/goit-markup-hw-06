@@ -1033,6 +1033,10 @@
       </div>
     </div>
     <script defer>
+      const img = new Image();
+      const preloadImage = window.devicePixelRatio >= 2 ? "hero@2x.webp" : "hero.webp";
+      img.src = preloadImage;
+      img.onload = () => {document.querySelector(".solutions").style.backgroundImage = "url(`./images/"+preloadImage+"`)";};
       document.querySelector('.menu_open').onclick = e => {
         e.preventDefault();
         document.querySelector('.menu-overlay').classList.add('is-open');
