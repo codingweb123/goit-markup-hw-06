@@ -3,9 +3,17 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="Content-Security-Policy" content="script-src 'none'">
     <title>Homework - 6</title>
     <link rel="stylesheet" href="css/normalize.css" />
     <link rel="stylesheet" href="css/styles.css" />
+    <link
+      rel="preload"
+      fetchpriority="high"
+      as="image"
+      href="./images/hero.webp"
+      type="image/webp"
+    />
   </head>
   <body>
     <header class="header">
@@ -37,7 +45,7 @@
             </li>
           </ul>
         </address>
-        <a href="#menu" class="menu_open">
+        <a href="#menu" class="menu_open" role="menuitem">
           <svg
             width="24"
             height="24"
@@ -55,7 +63,7 @@
       <section class="section solutions">
         <div class="container">
           <h1 class="solutions-title">Effective Solutions for Your Business</h1>
-          <button type="button" class="modal_open btn">Order Service</button>
+          <button type="button" class="modal_open btn" role="button">Order Service</button>
         </div>
       </section>
       <section class="section skills">
@@ -133,6 +141,7 @@
                 />
                 <img
                   src="./images/team1.webp"
+                  sizes="(min-width: 1158px) 264px, (min-width: 768px) 264px, 264px"
                   loading="lazy"
                   alt="Mark Guerrero Image"
                 />
@@ -188,6 +197,7 @@
                 />
                 <img
                   src="./images/team2.webp"
+                  sizes="(min-width: 1158px) 264px, (min-width: 768px) 264px, 264px"
                   loading="lazy"
                   alt="Tom Ford Image"
                 />
@@ -243,6 +253,7 @@
                 />
                 <img
                   src="./images/team3.webp"
+                  sizes="(min-width: 1158px) 264px, (min-width: 768px) 264px, 264px"
                   loading="lazy"
                   alt="Camila Garcia Image"
                 />
@@ -298,6 +309,7 @@
                 />
                 <img
                   src="./images/team4.webp"
+                  sizes="(min-width: 1158px) 264px, (min-width: 768px) 264px, 264px"
                   loading="lazy"
                   alt="Daniel Wilson Image"
                 />
@@ -370,6 +382,7 @@
                   />
                   <img
                     src="./images/portfolio1.webp"
+                    sizes="(min-width: 1158px) 360px, (min-width: 768px) 356px, 288px"
                     loading="lazy"
                     alt="Banking App"
                   />
@@ -411,6 +424,7 @@
                   />
                   <img
                     src="./images/portfolio2.webp"
+                    sizes="(min-width: 1158px) 360px, (min-width: 768px) 356px, 288px"
                     loading="lazy"
                     alt="Cashless Payment"
                   />
@@ -452,6 +466,7 @@
                   />
                   <img
                     src="./images/portfolio3.webp"
+                    sizes="(min-width: 1158px) 360px, (min-width: 768px) 356px, 288px"
                     loading="lazy"
                     alt="Meditation App"
                   />
@@ -493,6 +508,7 @@
                   />
                   <img
                     src="./images/portfolio4.webp"
+                    sizes="(min-width: 1158px) 360px, (min-width: 768px) 356px, 288px"
                     loading="lazy"
                     alt="Taxi Service"
                   />
@@ -534,6 +550,8 @@
                   />
                   <img
                     src="./images/portfolio5.webp"
+                    sizes="(min-width: 1158px) 360px, (min-width: 768px) 356px, 288px"
+                    loading="lazy"
                     alt="Screen Illustrations"
                   />
                 </picture>
@@ -574,6 +592,7 @@
                   />
                   <img
                     src="./images/portfolio6.webp"
+                    sizes="(min-width: 1158px) 360px, (min-width: 768px) 356px, 288px"
                     loading="lazy"
                     alt="Online Courses"
                   />
