@@ -230,26 +230,25 @@ address {
             gap: 48px;
         }
     }
-    background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7));
-    // background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url("../images/hero.webp");
-    // @include mobile {
-    //     background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url("../images/hero.webp");
-    //     @include resolution {
-    //         background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url("../images/hero@2x.webp");
-    //     }
-    // }
-    // @include tablet {
-    //     background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url("../images/hero.webp");
-    //     @include resolution {
-    //         background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url("../images/hero@2x.webp");
-    //     }
-    // }
-    // @include computer {
-    //     background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url("../images/hero.webp");
-    //     @include resolution {
-    //         background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url("../images/hero@2x.webp");
-    //     }
-    // }
+    background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url("../images/hero.webp");
+    @include mobile {
+        background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url("../images/hero.webp");
+        @include resolution {
+            background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url("../images/hero@2x.webp");
+        }
+    }
+    @include tablet {
+        background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url("../images/hero.webp");
+        @include resolution {
+            background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url("../images/hero@2x.webp");
+        }
+    }
+    @include computer {
+        background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url("../images/hero.webp");
+        @include resolution {
+            background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url("../images/hero@2x.webp");
+        }
+    }
 }
 .skills {
     ul {
@@ -542,10 +541,9 @@ a.icon {
             }
         }
         input {
-            max-width: 288px;
             min-width: 288px;
             height: 40px;
-            padding: 8px 16px;
+            padding: 0 16px;
             border: 1px solid #fff;
             border-radius: 4px;
             box-shadow: 0px 4px 4px 0px #00000026;
@@ -599,9 +597,6 @@ a.icon {
         color: #fff;
         @include tablet {
             text-align: left;
-        }
-        @include computer {
-            margin-left: 40px;
         }
         .icons {
             gap: 16px;
