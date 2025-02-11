@@ -984,18 +984,6 @@
       </div>
     </div>
     <script>
-      const img = new Image();
-      const preloadImage =
-        window.devicePixelRatio >= 2
-          ? './images/hero@2x.webp'
-          : './images/hero.webp';
-      img.src = preloadImage;
-      img.onload = () => {
-        document.querySelector('.solutions').style.backgroundImage =
-          "linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url('" +
-          preloadImage +
-          "')";
-      };
       document.querySelector('.menu_open').onclick = e => {
         e.preventDefault();
         document.querySelector('.menu-overlay').classList.add('is-open');
