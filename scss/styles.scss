@@ -506,12 +506,12 @@ a.icon {
         @include tablet {
             flex-wrap: wrap;
             flex-direction: row;
+            justify-content: unset;
             gap: 72px 24px;
         }
         @include computer {
             flex-direction: row;
             flex-wrap: nowrap;
-            justify-content: unset;
             gap: 80px;
         }
     }
