@@ -479,6 +479,7 @@ a.icon {
 
         h3 {
             font-size: 20px;
+            font-weight: 500;
             line-height: 1.2;
             letter-spacing: 0.02em;
             color: $dark;
@@ -553,8 +554,6 @@ a.icon {
         .portfolio-text {
             position: absolute;
             top: 0;
-            left: 0;
-            width: 100%;
             height: 100%;
             visibility: hidden;
             padding: 40px 32px;
@@ -580,6 +579,7 @@ a.icon {
 
         h3 {
             font-size: 20px;
+            font-weight: 500;
             line-height: 1.2;
             letter-spacing: 0.02em;
             color: $dark;
@@ -757,6 +757,8 @@ a.icon {
     }
 
     .logo {
+        display: flex;
+        align-self: center;
         font-size: 18px;
         line-height: 1.17;
         letter-spacing: 0.03em;
@@ -766,6 +768,8 @@ a.icon {
         color: $primary;
 
         @include tablet {
+            display: block;
+            align-self: flex-start;
             text-align: left;
         }
 
@@ -800,7 +804,7 @@ a.icon {
 }
 
 .modal-overlay {
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     display: flex;
